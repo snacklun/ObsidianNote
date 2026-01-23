@@ -71,30 +71,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/Algorithms/Bellman-Ford Algorithm.md",
+                "file": "Templates/New template algorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bellman-Ford Algorithm"
-            }
-          },
-          {
-            "id": "2021da8881bc8878",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning about networking/Learning about Port forwarding in NAT in VM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Learning about Port forwarding in NAT in VM"
+              "title": "New template algorithm"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -267,10 +253,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2021da8881bc8878",
+  "active": "9b4802bb00554cd8",
   "lastOpenFiles": [
-    "Notes/Untitled.md",
+    "Templates/New book.md",
+    "Reading List/Dive Into Design Patterns.md",
+    "Reading List/DevUp.md",
+    "2025 Yearly Goal Tracker/2025 Goals/Learning backend roadmap.md",
+    "2025 Yearly Goal Tracker/2025 Goals/Done 300 LeetCodes.md",
+    "2025 Yearly Goal Tracker/2025 Goals/Complete FCJ and AZ204.md",
     "Learning about networking/Learning about Port forwarding in NAT in VM.md",
+    "Notes/Untitled.md",
     "Notes",
     "Algorithm/Algorithms/Red-Black Tree.md",
     "Learning about networking",
@@ -295,7 +287,6 @@
     "Images/Pasted image 20251211212848.png",
     "Algorithm/Algorithms",
     "Algorithm/media",
-    "Templates/New book.md",
     "LeetCode/Easy/Find the Index of the First Occurrence in a String/Solutions",
     "LeetCode/Easy/Find the Index of the First Occurrence in a String",
     "Algorithm",
@@ -304,14 +295,9 @@
     "Learning backend roadmap/Mastering Domain Names- Structure, Function, and Management.md",
     "Learning backend roadmap/Web Technologies and Browsing- A Detailed Briefing.md",
     "Learning Design Pattern/Learning Design Pattern.md",
-    "Reading List/Dive Into Design Patterns.md",
     "Projects/Reading Books Status.md",
     "LeetCode/Easy",
     "LeetCode",
-    "Reading List/DevUp.md",
-    "Templates/Note.md",
-    "Reading List/Untitled.md",
-    "Learning Design Pattern/🔒 Simple Singleton Pattern (C)/🔒 Simple Singleton Pattern (C).md",
     "Excalidraw",
     "Images/Pasted image 20251012141700.png",
     "Reading List/Machine Learning- A Probabilistic Perspective (Kevin P. Murphy)/Untitled 5.png"
