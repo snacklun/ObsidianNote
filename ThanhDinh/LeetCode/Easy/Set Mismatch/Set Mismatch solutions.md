@@ -76,20 +76,64 @@ class Solution:
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         n = len(nums)
-
         expected_sum = n * (n + 1) // 2
         actual_sum = sum(nums)
-        unique_sum = sum(set(nums))
 
-        duplicate = actual_sum - unique_sum
-        missing = expected_sum - unique_sum
+        duplicate = sum(nums) - sum(set(nums))
+        missing = expected_sum - (actual_sum - duplicate)
 
         return [duplicate, missing]
+``` 
+
+# Set Mismatch (Math Intuition)
+
+Let the correct set be `{1, 2, ..., n}`.
+
+## Key Facts
+
+- **Expected sum**:  
+    ```
+    S = 1 + 2 + \cdots + n = \frac{n(n+1)}{2}
+    ```
+    
+    
+- One number **d** is duplicated.
+    
+- One number **m** is missing.
+    
+
+## What the sums represent
+
+- **Actual sum** of array:  
+    [ \text{actual} = S - m + d ]
+    
+- **Unique sum** (using `set(nums)`):  
+    [ \text{unique} = S - m ]
+    
+
+## Derivation
+
+- Duplicate:  
+    [ d = \text{actual} - \text{unique} ]
+    
+- Missing:  
+    [ m = S - (\text{actual} - d) ]
+    
+
+## Code Mapping
+
+```python
+expected_sum = n * (n + 1) // 2
+actual_sum = sum(nums)
+duplicate = actual_sum - sum(set(nums))
+missing = expected_sum - (actual_sum - duplicate)
 ```
 
+## Takeaway
+
+Two equations, two unknowns → subtract to get the duplicate, plug back to get the missing number.
 
 ---
-
 ## Approach 3 — In-Place Marking (O(1) Extra Space)
 
 ⚠️ This modifies the input array.

@@ -9,5 +9,6 @@
   "templater-obsidian",
   "obsidian-tasks-plugin",
   "url-into-selection",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-math-plus"
 ]
