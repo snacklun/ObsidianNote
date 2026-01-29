@@ -88,37 +88,23 @@ class Solution:
 # Set Mismatch (Math Intuition)
 
 Let the correct set be `{1, 2, ..., n}`.
-
 ## Key Facts
 
 - **Expected sum**:  
-    ```
-    S = 1 + 2 + \cdots + n = \frac{n(n+1)}{2}
-    ```
-    
-    
+   
+    $S = 1 + 2 + \cdots + n = \frac{n(n+1)}{2}.$
 - One number **d** is duplicated.
-    
 - One number **m** is missing.
-    
-
 ## What the sums represent
 
 - **Actual sum** of array:  
-    [ \text{actual} = S - m + d ]
-    
+    $[Actual Sum=S-m+d]$
 - **Unique sum** (using `set(nums)`):  
-    [ \text{unique} = S - m ]
-    
-
+    $[Uniqe=S-m]$
 ## Derivation
 
-- Duplicate:  
-    [ d = \text{actual} - \text{unique} ]
-    
-- Missing:  
-    [ m = S - (\text{actual} - d) ]
-    
+- Duplicate:  $d=Actual-Unique$
+- Missing:  $[m=S-(Actual-d)]$
 
 ## Code Mapping
 
