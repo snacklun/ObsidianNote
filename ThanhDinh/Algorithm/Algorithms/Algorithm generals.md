@@ -36,8 +36,8 @@ Algorithms for problems on graphs (nodes and edges).
     - Depth-First Search (DFS): Explores as far as possible along each branch (O(V+E)).
     - Breadth-First Search (BFS): Explores level by level (O(V+E)).
 - **Shortest Path**:
-    - [Dijkstra’s Algorithm: Finds shortest paths from a source in weighted graphs with non-negative weights (O((V+E) log V) with a priority queue)](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FDijkstra's%20Algorithm).
-    - Bellman-Ford Algorithm: Handles negative weights for shortest paths (O(VE)).
+    - Dijkstra’s Algorithm: Finds shortest paths from a source in weighted graphs with non-negative weights (O((V+E) log V) with a priority queue)] ([[Dijkstra's Algorithm]])
+    - Bellman-Ford Algorithm: Handles negative weights for shortest paths (O(VE)). ([[Bellman-Ford Algorithm]])
     - A* Search: Uses heuristics for shortest path in weighted graphs (O(E log V) with good heuristics).
     - Floyd-Warshall Algorithm: Finds all-pairs shortest paths (O(V³)).
 - **Minimum Spanning Tree**:
@@ -58,7 +58,7 @@ Algorithms for problems on graphs (nodes and edges).
 Algorithms to find occurrences of a pattern in a text.
 
 - Naive String Matching: Checks each position for a match (O(n*m)).
-- [Knuth-Morris-Pratt (KMP): Uses a failure function to skip redundant checks (O(n+m)).](obsidian://open?vault=ThanhDinh&file=LeetCode%2FEasy%2FFind%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String%2FSolutions%2FKMP%20(Knuth-Morris-Pratt)%20Algorithm%20for%20Substring%20Search)
+- Knuth-Morris-Pratt (KMP): Uses a failure function to skip redundant checks (O(n+m)) ([[KMP (Knuth-Morris-Pratt) Algorithm for Substring Search]])
 - Boyer-Moore: Skips sections of text based on mismatch patterns (O(n+m) average, O(nm) worst).
 - Rabin-Karp: Uses hashing for pattern matching (O(n+m) average, O(nm) worst).
 - Aho-Corasick: Matches multiple patterns simultaneously (O(n+m+k), where k is output size).
@@ -186,14 +186,24 @@ Algorithms used to maintain, organize, and query hierarchical data structures ef
     
 - **Self-Balancing Binary Search Trees (In-Memory Optimization):**
     
-    - [**Red-Black Tree:**](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FRed-Black%20Tree) Maintains near-optimal balance using color properties, guaranteeing **$O(\log N)$** worst-case time for search, insertion, and deletion. Widely used in programming language standard libraries (`std::map`).
+    - [[Red-Black Tree]] Maintains near-optimal balance using color properties, guaranteeing **$O(\log N)$** worst-case time for search, insertion, and deletion. Widely used in programming language standard libraries (`std::map`).
         
-    - [**AVL Tree:**](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FAVL%20Tree) The first self-balancing BST. Maintains the strictest balance (height difference $\le 1$), offering the fastest **search** time but requiring more rotation overhead than RBTs upon updates.
+    - [[AVL Tree]] The first self-balancing BST. Maintains the strictest balance (height difference $\le 1$), offering the fastest **search** time but requiring more rotation overhead than RBTs upon updates.
         
-    - [**Splay Tree:**](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FSplay%20Tree) Self-adjusting tree that moves the most recently accessed node to the root. Excellent for data with **uneven access patterns** (caching), guaranteeing **$O(\log N)$ amortized** time.
+    - [[Splay Tree]] Self-adjusting tree that moves the most recently accessed node to the root. Excellent for data with **uneven access patterns** (caching), guaranteeing **$O(\log N)$ amortized** time.
         
 - **External Memory Trees (Disk Optimization):**
     
-    - [**B-Tree:**](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FB-Tree) M-way search tree optimized for disk-based storage. Its wide, shallow structure minimizes **Disk I/O** (disk block reads) for database indexing and file systems ($O(\log_M N)$ where $M$ is large).
+    - [[B-Tree]] M-way search tree optimized for disk-based storage. Its wide, shallow structure minimizes **Disk I/O** (disk block reads) for database indexing and file systems ($O(\log_M N)$ where $M$ is large).
         
-    - [**B+ Tree:**](obsidian://open?vault=ThanhDinh&file=Algorithm%2FAlgorithms%2FB%2B%20Tree) Variation of the B-Tree where all data is stored only in the **leaf nodes**, and the leaves are linked sequentially. Ideal for extremely fast **range queries** in database systems.
+    - [[B+ Tree]] Variation of the B-Tree where all data is stored only in the **leaf nodes**, and the leaves are linked sequentially. Ideal for extremely fast **range queries** in database systems.
+## 17. Stack-Based Algorithms
+
+Algorithms that rely on **Last-In-First-Out (LIFO)** behavior to evaluate expressions, track state, or process nested structures.
+
+- **Reverse Polish Notation (Postfix Evaluation):**  
+- Uses a stack to evaluate expressions where operators follow operands. Each operator pops two values, applies the operation, and pushes the result. Common in compilers and stack-based virtual machines. (O(n))
+- Infix to Postfix Conversion: Converts standard expressions into RPN using operator precedence and a stack (Shunting Yard Algorithm).
+- Parentheses Validation: Checks balanced brackets using a stack (O(n)).
+- Next Greater Element: Uses a monotonic stack to find the next larger value (O(n)).
+- Expression Parsing: Evaluates nested expressions and syntax trees.
